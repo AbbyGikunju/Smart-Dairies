@@ -6,24 +6,57 @@
     <title>smartdairies</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigation Bar -->
-     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#home"></a>Home</li>
-            <li><a href="#products"></a>Products</li>
-            <li><a href="#about"></a>About Us</li>
-            <li><a href="#contact"></a>Contact us</li>
-        </ul>
-        <div class="login-buttons"></div>
-            <a href="#" class="btn-login">Employee Login</a>
-            <a href="#" class="btn-login">Customer Login</a>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Smart Dairies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact Us</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#farmers">Our Farmers</a></li>
+                        <li><a class="dropdown-item" href="#">FAQs</a></li>
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#" class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span> <!-- This will show the number of items in the cart -->
+            </a>
+            <div class="login-buttons ms-lg-3">
+                <a href="#" class="btn-login">Employee Login</a>
+                <a href="#" class="btn-login">Customer Login</a>
+            </div>
         </div>
-     </nav>
-        
+    </div>
+</nav>
+
     <!-- Hero Section -->
      <section class="hero">
         <div class="hero-content">
@@ -31,7 +64,7 @@
             <p>Premium quality milk sourced from local, delivered fresh every day </p>
             <div class="hero-buttons">
                 <a href="#products" class="btn">Shop Milk Products</a>
-                <a href="farmers" class="btn">Learn About Our Farmers</a>
+                <a href="#farmers" class="btn">Learn About Our Farmers</a>
             </div>
         </div>
      </section>
@@ -56,7 +89,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <img src="path_to_your_image.jpg" alt="Our Farm" class="img-fluid">
+                    <img src="images/dairy farm.jpg" alt="Our Farm" class="img-fluid">
                 </div>
             </div>
       </section>
@@ -64,66 +97,69 @@
       <!-- Featured Products Section -->
        <section id="products" class="products py-5">
           <div class="container">
-            <h2 class="text-center mb-5">Our Featrured Products</h2>
+            <h2 class="text-center mb-5">Our Featured Products</h2>
             <div class="row">
-                <!-- Card 1: Fresh Whole Milk -->
-                <div class="col-md-3" >
-                    <div class="card">
-                        <img src="images/milk card.jpg" class="card-img-top" alt="Fresh Whole Milk">
-                        <div class="card-body">
-                            <h5 class="card-title">Fresh Whole Milk</h5>
-                            <p class="card-text">Locally sourced, fresh whole milk delivered directly to your doorstep.</p>
-                            <div class="d-flex justify-content-between">
-                                <a href="#" class="btn btn-primary">Fresh Milk</a>
-                                <a href="#" class="btn btn-success">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                   <!-- Card 2: Yoghurt -->
-             <div class="col-md-3">
-                <div class="card">
-                    <img src="images/yogurt card.jpeg" class="card-img-top" alt="Yoghurt">
-                    <div class="card-body">
-                        <h5 class="class-title">Yoghurt</h5>
-                        <p class="card-text">Delicious, natural yoghurt in various flavours.Perfect for a healthy snack!</p>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-primary">Flavours</a>
-                            <a href="#" class="btn btn-success">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-             </div>
+          <!-- Card 1: Fresh Whole Milk -->
+<div class="col-md-3">
+  <div class="card">
+    <img src="images/milk card.jpg" class="card-img-top" alt="Fresh Whole Milk">
+    <div class="card-body">
+      <h5 class="card-title">Fresh Whole Milk</h5>
+      <p class="card-text">Locally sourced, fresh whole milk delivered directly to your doorstep.</p>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-primary">Fresh Milk</a>
+        <button class="btn btn-success add-to-cart" data-product-id="1">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-             <!-- Card 3: Ice Cream -->
-              <div class="col-md-3">
-                <div class="card">
-                    <img src="images/ice cream card (1).jpeg" class="card-img--top" alt="Ice Cream" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title">Ice Cream</h5>
-                        <p class="card-text">Creamy, delicious ice cream available in a variety of flavors that will melt your taste buds!</p>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-primary">Explore</a>
-                            <a href="#" class="btn btn-success">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-              </div>
+<!-- Card 2: Yoghurt -->
+<div class="col-md-3">
+  <div class="card">
+    <img src="images/yogurt card.jpeg" class="card-img-top" alt="Yoghurt">
+    <div class="card-body">
+      <h5 class="class-title">Yoghurt</h5>
+      <p class="card-text">Delicious, natural yoghurt in various flavours. Perfect for a healthy snack!</p>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-primary">Flavours</a>
+        <button class="btn btn-success add-to-cart" data-product-id="2">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-              <!-- Card 4: Dairy Cattle for Sale -->
-               <div class="col-md-3">
-                <div class="card">
-                    <img src="images/cow card.jpeg" class="card-img-top" alt="Dairy Cow for Sale">
-                    <div class="card-body">
-                        <h5 class="card-title">Dairy Cow for Sale</h5>
-                        <p class="card-text">High-quality dairy cows available for sale. Contact us to learn more.</p>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                            <a href="#" class="btn btn-success">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-               </div>
+<!-- Card 3: Ice Cream -->
+<div class="col-md-3">
+  <div class="card">
+    <img src="images/ice cream card (1).jpeg" class="card-img-top" alt="Ice Cream" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Ice Cream</h5>
+      <p class="card-text">Creamy, delicious ice cream available in a variety of flavors that will melt your taste buds!</p>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-primary">Explore</a>
+        <button class="btn btn-success add-to-cart" data-product-id="3">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 4: Dairy Cattle for Sale -->
+<div class="col-md-3">
+  <div class="card">
+    <img src="images/cow card.jpeg" class="card-img-top" alt="Dairy Cow for Sale">
+    <div class="card-body">
+      <h5 class="card-title">Dairy Cow for Sale</h5>
+      <p class="card-text">High-quality dairy cows available for sale. Contact us to learn more.</p>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-primary">Learn More</a>
+        <button class="btn btn-success add-to-cart" data-product-id="4">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
             </div>
 
          
@@ -131,11 +167,63 @@
        </section>
 
        <!-- Farmers -->
-        <section class="farmers">
-            
+        <section id="farmers"  class="farmers py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Meet Our Farmers</h2>
+                <div id="farmersCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="row text-center">
+                        <!-- Farmer 1 -->
+                        <div class="col-md-4">
+                          <div class="card">
+                            <img src="images/farmer 1.jpg" class="card-img-top" alt="Farmer John" height="200px">
+                            <div class="card-body">
+                              <h5 class="card-title">Farmer John</h5>
+                              <p class="card-text">20 years of sustainable dairy farming in the Highlands.</p>
+                              <a href="#" class="btn btn-info">Learn More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Farmer 2 -->
+                        <div class="col-md-4">
+                          <div class="card">
+                            <img src="images/farmer 2.jpg" class="card-img-top" alt="Farmer Ian" height="200px">
+                            <div class="card-body">
+                              <h5 class="card-title">Farmer Ian</h5>
+                              <p class="card-text">Specializing in organic dairy production for over a decade.</p>
+                              <a href="#" class="btn btn-info">Learn More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Farmer 3 -->
+                        <div class="col-md-4">
+                          <div class="card">
+                            <img src="images/farmer 3.jpg" class="card-img-top" alt="Farmer Maggie" height="200px">
+                            <div class="card-body">
+                              <h5 class="card-title">Farmer Maggie</h5>
+                              <p class="card-text">Committed to eco-friendly farming and animal care.</p>
+                              <a href="#" class="btn btn-info">Learn More</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Add more carousel-items for additional farmers if needed -->
+                  </div>
+                  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#farmersCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#farmersCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button> -->
+                </div>
+              </div>
         </section>
 
-        <section class="testimonials" class="testimonials py-5">
+        <section id="testimonials" class="testimonials py-5">
             <div class="container">
                 <h2 class="text-center mb-5">What Our Customers Say</h2>
                 <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -143,13 +231,13 @@
                     <div class="carousel-item active">
                       <div class="testimonial text-center">
                         <p>"Smart Dairies has the best milk in town! Always fresh and delivered on time."</p>
-                        <h5>- John Doe</h5>
+                        <h5>- John Gojo</h5>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="testimonial text-center">
                         <p>"I love their yoghurt! It's so creamy and full of flavor. Highly recommend!"</p>
-                        <h5>- Jane Smith</h5>
+                        <h5>- Jane Utahime</h5>
                       </div>
                     </div>
                   </div>
@@ -165,10 +253,51 @@
               </div>
         </section>
 
-ll
         <!-- Footer -->
-         <section class="footer">
-
+         <section id="footer" class="footer py-5">
+                <div class="container">
+                  <div class="row">
+                    <!-- About Column -->
+                    <div class="col-md-4">
+                      <h5 class="footer-title">About Smart Dairies</h5>
+                      <p>We bring the freshest, ethically sourced milk from local farms to your doorstep. Proudly supporting sustainability and local farmers.</p>
+                      <a href="#about" class="btn btn-outline-light mt-2">Learn More</a>
+                    </div>
+                    
+                    <!-- Quick Links Column -->
+                    <div class="col-md-4">
+                      <h5 class="footer-title">Quick Links</h5>
+                      <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                      </ul>
+                    </div>
+              
+                    <!-- Contact Column -->
+                    <div class="col-md-4">
+                      <h5 class="footer-title">Contact Us</h5>
+                      <p><i class="bi bi-geo-alt"></i> 123 Subukia, Nakuru.</p>
+                      <p><i class="bi bi-telephone"></i> +123 456 7890</p>
+                      <p><i class="bi bi-envelope"></i> info@smartdairies.com</p>
+                      <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Footer Bottom -->
+                  <div class="row mt-4">
+                    <div class="col text-center">
+                      <p class="mb-0">&copy; 2024 Smart Dairies. All Rights Reserved.</p>
+                    </div>
+                  </div>
+                </div>
          </section>
+         <script src="cart.js" defer></script>
+
 </body>
 </html>
